@@ -1,0 +1,6 @@
+E:\ADO.NET\ClassWork\04.02.2020\04.02.2020\bin\Debug\04.02.2020.exe.config
+E:\ADO.NET\ClassWork\04.02.2020\04.02.2020\bin\Debug\04.02.2020.exe
+E:\ADO.NET\ClassWork\04.02.2020\04.02.2020\bin\Debug\04.02.2020.pdb
+E:\ADO.NET\ClassWork\04.02.2020\04.02.2020\obj\Debug\04.02.2020.csprojAssemblyReference.cache
+E:\ADO.NET\ClassWork\04.02.2020\04.02.2020\obj\Debug\04.02.2020.exe
+E:\ADO.NET\ClassWork\04.02.2020\04.02.2020\obj\Debug\04.02.2020.pdb

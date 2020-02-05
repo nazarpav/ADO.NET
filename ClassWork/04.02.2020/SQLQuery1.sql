@@ -1,0 +1,65 @@
+﻿--CREATE DATABASE [LIBRARY]
+--GO
+--USE [LIBRARY]
+--GO
+--CREATE TABLE Authors
+--(
+--[Id] INT NOT NULL IDENTITY(1, 1) PRIMARY KEY,  
+--Author_Name NVARCHAR(150) NOT NULL CHECK (Author_Name!=''),
+--Author_Surname NVARCHAR(150) NOT NULL CHECK (Author_Surname!=''),
+--Age DATE NOT NULL
+--)
+--GO
+--CREATE TABLE Countries
+--(
+--[Id] INT NOT NULL IDENTITY(1, 1) PRIMARY KEY,  
+--Country NVARCHAR(150) NOT NULL CHECK (Country!='') UNIQUE
+--)
+--GO
+--CREATE TABLE Languages
+--(
+--[Id] INT NOT NULL IDENTITY(1, 1) PRIMARY KEY,  
+--Language_Name NVARCHAR(150) NOT NULL CHECK (Language_Name!=''),
+--Country_id INT NOT NULL FOREIGN KEY REFERENCES Countries(Id)
+--)
+--GO
+--CREATE TABLE Books
+--(
+--[Id] INT NOT NULL IDENTITY(1, 1) PRIMARY KEY,  
+--Book_Name NVARCHAR(150) NOT NULL CHECK (Book_Name!=''),
+--Author_Id INT NOT  NULL FOREIGN KEY REFERENCES Authors(Id) ON DELETE CASCADE,
+--Language_id INT NOT  NULL FOREIGN KEY REFERENCES Languages(Id) ON DELETE CASCADE,
+--Pages_count INT NOT NULL
+--)
+--GO
+--INSERT Authors
+--VALUES
+--('BORIS','GOROBKO','1943-11-12'),
+--('ABORIS','GOROBKO','1953-11-12'),
+--('FBORIS','GOROBKO','1963-11-12'),
+--('WBORIS','GOROBKO','1913-11-12'),
+--('QBORIS','GOROBKO','1933-11-12')
+--GO 
+--INSERT Countries
+--VALUES
+--('UKRAINE'),
+--('RUSSIA'),
+--('USSSR'),
+--('MOLDOVA'),
+--('GERMANY')
+--GO
+--INSERT Languages
+--VALUES
+--('UKRAINIAN',1),
+--('RUSSIAN',2),
+--('RUSSIAN',3),
+--('RUSSIAN',4),
+--('DEUTSCH',5)
+--GO
+--INSERT Books
+--VALUES
+--('KOROVKA',1,1,150),
+--('LIS',2,2,300),
+--('DOG',3,3,120),
+--('APPLE',4,4,180),
+--('UNITY',5,5,560)
