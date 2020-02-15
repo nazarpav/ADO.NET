@@ -1,0 +1,10 @@
+E:\ADO.NET\ClassWork\11.02.2020\11.02.2020\bin\Debug\11.02.2020.exe.config
+E:\ADO.NET\ClassWork\11.02.2020\11.02.2020\bin\Debug\11.02.2020.exe
+E:\ADO.NET\ClassWork\11.02.2020\11.02.2020\bin\Debug\11.02.2020.pdb
+E:\ADO.NET\ClassWork\11.02.2020\11.02.2020\obj\Debug\11.02.2020.csprojAssemblyReference.cache
+E:\ADO.NET\ClassWork\11.02.2020\11.02.2020\obj\Debug\_11._02._2020.Properties.Resources.resources
+E:\ADO.NET\ClassWork\11.02.2020\11.02.2020\obj\Debug\11.02.2020.csproj.GenerateResource.cache
+E:\ADO.NET\ClassWork\11.02.2020\11.02.2020\obj\Debug\11.02.2020.exe
+E:\ADO.NET\ClassWork\11.02.2020\11.02.2020\obj\Debug\11.02.2020.pdb
+E:\ADO.NET\ClassWork\11.02.2020\11.02.2020\obj\Debug\_11._02._2020.Form1.resources
+E:\ADO.NET\ClassWork\11.02.2020\11.02.2020\obj\Debug\_11._02._2020.Form2.resources

@@ -1,0 +1,16 @@
+﻿--GO 
+--CREATE DATABASE USER_;
+--GO
+--CREATE TABLE Users
+--(
+--Id INT PRIMARY KEY IDENTITY NOT NULL,
+--[Login] NVARCHAR(255) NOT NULL CHECK([Login]!=''),
+--[Password] NVARCHAR(255) NOT NULL CHECK([Password]!=''),
+--[Address] NVARCHAR(255) NOT NULL CHECK([Address]!=''),
+--Phone NVARCHAR(255) NOT NULL CHECK(Phone!=''),
+--IsAdmin BIT NOT NULL DEFAULT 0
+--)
+GO
+INSERT Users
+VALUES
+('Nazar','12345678','st.Pushkina','+380543223',0)

@@ -1,0 +1,11 @@
+E:\ADO.NET\ClassWork\12.02.2020\12.02.2020\bin\Debug\netcoreapp3.0\12.02.2020.exe
+E:\ADO.NET\ClassWork\12.02.2020\12.02.2020\bin\Debug\netcoreapp3.0\12.02.2020.deps.json
+E:\ADO.NET\ClassWork\12.02.2020\12.02.2020\bin\Debug\netcoreapp3.0\12.02.2020.runtimeconfig.json
+E:\ADO.NET\ClassWork\12.02.2020\12.02.2020\bin\Debug\netcoreapp3.0\12.02.2020.runtimeconfig.dev.json
+E:\ADO.NET\ClassWork\12.02.2020\12.02.2020\bin\Debug\netcoreapp3.0\12.02.2020.dll
+E:\ADO.NET\ClassWork\12.02.2020\12.02.2020\bin\Debug\netcoreapp3.0\12.02.2020.pdb
+E:\ADO.NET\ClassWork\12.02.2020\12.02.2020\obj\Debug\netcoreapp3.0\12.02.2020.csprojAssemblyReference.cache
+E:\ADO.NET\ClassWork\12.02.2020\12.02.2020\obj\Debug\netcoreapp3.0\12.02.2020.AssemblyInfoInputs.cache
+E:\ADO.NET\ClassWork\12.02.2020\12.02.2020\obj\Debug\netcoreapp3.0\12.02.2020.AssemblyInfo.cs
+E:\ADO.NET\ClassWork\12.02.2020\12.02.2020\obj\Debug\netcoreapp3.0\12.02.2020.dll
+E:\ADO.NET\ClassWork\12.02.2020\12.02.2020\obj\Debug\netcoreapp3.0\12.02.2020.pdb

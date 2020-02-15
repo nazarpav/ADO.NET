@@ -1,0 +1,92 @@
+﻿--GO
+--CREATE DATABASE LIBRARY_
+--GO
+--CREATE TABLE Readers
+--(
+--Id INT NOT NULL PRIMARY KEY IDENTITY,
+--[Name] NVARCHAR(150) NOT NULL CHECK([Name]!=''),
+--IsDebtor BIT NOT NULL DEFAULT 0
+--)
+--GO 
+--CREATE TABLE Books
+--(
+--Id INT NOT NULL PRIMARY KEY IDENTITY,
+--[Name] NVARCHAR(150) NOT NULL CHECK([Name]!=''),
+--IsAvailable BIT NOT NULL DEFAULT 0
+--)
+--GO
+--CREATE TABLE Authors
+--(
+--Id INT NOT NULL PRIMARY KEY IDENTITY,
+--[Name] NVARCHAR(150) NOT NULL CHECK([Name]!='')
+--)
+--GO
+--CREATE TABLE Books_Authors
+--(
+--Id INT NOT NULL PRIMARY KEY IDENTITY,
+--Book_Id INT NOT NULL FOREIGN KEY REFERENCES Books(Id),
+--Author_Id INT NOT NULL FOREIGN KEY REFERENCES Authors(Id)
+--)
+--GO
+--CREATE TABLE Book_Readers
+--(
+--Id INT NOT NULL PRIMARY KEY IDENTITY,
+--Book_Id INT NOT NULL FOREIGN KEY REFERENCES Books(Id),
+--Reader_Id INT NOT NULL FOREIGN KEY REFERENCES Readers(Id)
+--)
+----------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------
+--GO
+--INSERT Authors
+--VALUES
+--('Herald'),
+--('Robert'),
+--('Taras'),
+--('Lesya'),
+--('Vitold'),
+--('Olgerd')
+--GO
+--INSERT Books
+--VALUES
+--('Kit i pes',1),
+--('Morozko',1),
+--('Herald from Rivne',0),
+--('Mibip',0),
+--('Prikol iz rivnogo',0),
+--('Yash programist?',1),
+--('Php lesons',0),
+--('C++ dlya chainikov',0)
+--GO
+--INSERT Readers
+--VALUES
+--('Nazar',0),
+--('Sasha',0),
+--('Pavlo',0),
+--('Bogdan',0),
+--('Ivan',0),
+--('Rybko',0)
+--GO
+--INSERT Books_Authors
+--VALUES
+--(1,1),
+--(1,2),
+--(2,2),
+--(2,3),
+--(3,2),
+--(4,4),
+--(4,4),
+--(5,4),
+--(6,5),
+--(6,5),
+--(7,6),
+--(8,6),
+--(8,6)
+--GO 
+--INSERT Book_Readers
+--VALUES
+--(6,4),
+--(3,4),
+--(5,3),
+--(8,1),
+--(7,2),
+--(6,2)
