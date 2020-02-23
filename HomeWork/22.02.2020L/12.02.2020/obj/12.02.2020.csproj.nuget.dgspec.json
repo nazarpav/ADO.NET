@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\ADO.NET\\ClassWork\\12.02.2020\\12.02.2020\\12.02.2020.csproj": {}
+    "E:\\ADO.NET\\HomeWork\\22.02.2020L\\12.02.2020\\12.02.2020.csproj": {}
   },
   "projects": {
-    "E:\\ADO.NET\\ClassWork\\12.02.2020\\12.02.2020\\12.02.2020.csproj": {
+    "E:\\ADO.NET\\HomeWork\\22.02.2020L\\12.02.2020\\12.02.2020.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\ADO.NET\\ClassWork\\12.02.2020\\12.02.2020\\12.02.2020.csproj",
+        "projectUniqueName": "E:\\ADO.NET\\HomeWork\\22.02.2020L\\12.02.2020\\12.02.2020.csproj",
         "projectName": "12.02.2020",
-        "projectPath": "E:\\ADO.NET\\ClassWork\\12.02.2020\\12.02.2020\\12.02.2020.csproj",
+        "projectPath": "E:\\ADO.NET\\HomeWork\\22.02.2020L\\12.02.2020\\12.02.2020.csproj",
         "packagesPath": "C:\\Users\\назар\\.nuget\\packages\\",
-        "outputPath": "E:\\ADO.NET\\ClassWork\\12.02.2020\\12.02.2020\\obj\\",
+        "outputPath": "E:\\ADO.NET\\HomeWork\\22.02.2020L\\12.02.2020\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
