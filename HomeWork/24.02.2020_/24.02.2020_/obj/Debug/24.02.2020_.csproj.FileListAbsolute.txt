@@ -1,0 +1,14 @@
+E:\ADO.NET\HomeWork\24.02.2020_\24.02.2020_\bin\Debug\24.02.2020_.exe.config
+E:\ADO.NET\HomeWork\24.02.2020_\24.02.2020_\bin\Debug\24.02.2020_.exe
+E:\ADO.NET\HomeWork\24.02.2020_\24.02.2020_\bin\Debug\24.02.2020_.pdb
+E:\ADO.NET\HomeWork\24.02.2020_\24.02.2020_\obj\Debug\24.02.2020_.csprojAssemblyReference.cache
+E:\ADO.NET\HomeWork\24.02.2020_\24.02.2020_\obj\Debug\MainWindow.g.cs
+E:\ADO.NET\HomeWork\24.02.2020_\24.02.2020_\obj\Debug\App.g.cs
+E:\ADO.NET\HomeWork\24.02.2020_\24.02.2020_\obj\Debug\24.02.2020__MarkupCompile.cache
+E:\ADO.NET\HomeWork\24.02.2020_\24.02.2020_\obj\Debug\24.02.2020__MarkupCompile.lref
+E:\ADO.NET\HomeWork\24.02.2020_\24.02.2020_\obj\Debug\MainWindow.baml
+E:\ADO.NET\HomeWork\24.02.2020_\24.02.2020_\obj\Debug\24.02.2020_.g.resources
+E:\ADO.NET\HomeWork\24.02.2020_\24.02.2020_\obj\Debug\_24._02._2020_.Properties.Resources.resources
+E:\ADO.NET\HomeWork\24.02.2020_\24.02.2020_\obj\Debug\24.02.2020_.csproj.GenerateResource.cache
+E:\ADO.NET\HomeWork\24.02.2020_\24.02.2020_\obj\Debug\24.02.2020_.exe
+E:\ADO.NET\HomeWork\24.02.2020_\24.02.2020_\obj\Debug\24.02.2020_.pdb

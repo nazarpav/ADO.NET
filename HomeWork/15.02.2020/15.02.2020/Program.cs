@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Configuration;
+using System.Threading;
 
 namespace _15._02._2020
 {
@@ -19,6 +20,10 @@ namespace _15._02._2020
                     ConnectionString;
             cn.ConnectionString = cs;
             AsyncQuery(cs);
+
+
+
+            Thread.Sleep(2000);
         }
     static void GetDataCallback(IAsyncResult result)
         {

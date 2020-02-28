@@ -1,0 +1,11 @@
+E:\ADO.NET\ClassWork\27.02.2020\bin\Debug\ShopCodeFirst.exe.config
+E:\ADO.NET\ClassWork\27.02.2020\bin\Debug\ShopCodeFirst.exe
+E:\ADO.NET\ClassWork\27.02.2020\bin\Debug\ShopCodeFirst.pdb
+E:\ADO.NET\ClassWork\27.02.2020\bin\Debug\EntityFramework.dll
+E:\ADO.NET\ClassWork\27.02.2020\bin\Debug\EntityFramework.SqlServer.dll
+E:\ADO.NET\ClassWork\27.02.2020\bin\Debug\EntityFramework.xml
+E:\ADO.NET\ClassWork\27.02.2020\bin\Debug\EntityFramework.SqlServer.xml
+E:\ADO.NET\ClassWork\27.02.2020\obj\Debug\ShopCodeFirst.csprojAssemblyReference.cache
+E:\ADO.NET\ClassWork\27.02.2020\obj\Debug\ShopCodeFirst.csproj.CopyComplete
+E:\ADO.NET\ClassWork\27.02.2020\obj\Debug\ShopCodeFirst.exe
+E:\ADO.NET\ClassWork\27.02.2020\obj\Debug\ShopCodeFirst.pdb
