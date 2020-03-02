@@ -1,31 +1,94 @@
 ﻿using System;
-using System.Data;
 using System.Collections.Generic;
+using System.Configuration;
+using System.Data;
+using System.Data.Common;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
-using System.Configuration;
 using System.Threading;
+using System.Threading.Tasks;
 
-namespace _15._02._2020
+namespace AsyncMethods
 {
+    enum Tasks
+    {
+        T1,
+        T2
+    }
     class Program
     {
+        static List<SqlDataReader> RList = new List<SqlDataReader>();
+        static Random rnd = new Random();
+        static string cs;
         static void Main(string[] args)
         {
-            SqlConnection cn = new SqlConnection();
-            var cs = ConfigurationManager.
+        SqlConnection cn = new SqlConnection();
+            
+            cs = ConfigurationManager.
                     ConnectionStrings["LibraryConnStr"].
                     ConnectionString;
             cn.ConnectionString = cs;
-            AsyncQuery(cs);
-
-
-
-            Thread.Sleep(2000);
+            ///////////Взагалі працює, але якось через раз(і з тестів які я провів виявилося, що краще запускати по одному завданні за раз)
+            T1();
+            T2();
         }
-    static void GetDataCallback(IAsyncResult result)
+        static void T1()
+        {
+            AsyncQuery(cs, "SELECT * FROM Books;", Tasks.T1);
+            Thread.Sleep(50);
+            AsyncQuery(cs, "SELECT * FROM Authors;", Tasks.T1);
+            Thread.Sleep(50);
+            AsyncQuery(cs, "SELECT * FROM Readers;", Tasks.T1);
+            Thread.Sleep(50);
+        }
+        static void T2()
+        {
+            List<WaitHandle> waitHandles = new List<WaitHandle>();
+            waitHandles.Add(AsyncQuery(cs, "SELECT * FROM Books;", Tasks.T2).AsyncWaitHandle);
+            waitHandles.Add(AsyncQuery(cs, "SELECT * FROM Authors;", Tasks.T2).AsyncWaitHandle);
+            waitHandles.Add(AsyncQuery(cs, "SELECT * FROM Readers;", Tasks.T2).AsyncWaitHandle);
+            if (WaitHandle.WaitAll(waitHandles.ToArray()))
+            {
+                Console.WriteLine("-------------------------------------------------------------------------------------------------------------------");
+                foreach (var g in RList)
+                {
+                    while (g.Read())
+                    {
+                        for (int i = 0; i < g.FieldCount; i++)
+                        {
+                            Console.Write($"{g[i]} | ");
+                        }
+                        Console.WriteLine();
+                    }
+                    Console.WriteLine("\n------------------------\n");
+                }
+                foreach (var g in RList)
+                {
+                    g.Close();
+                }
+                Thread.Sleep(50);
+            }
+        }
+        static void GetDataCallback2(IAsyncResult result)
+        {
+            SqlDataReader reader = null;
+            try
+            {
+                SqlCommand command = (SqlCommand)result.AsyncState;
+                reader = command.EndExecuteReader(result);
+                RList.Add(reader);
+                Thread.Sleep(100);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("From Callback 1:" + ex.Message);
+            }
+            finally
+            {
+            }
+        }
+        static void GetDataCallback(IAsyncResult result)
         {
             SqlDataReader reader = null;
             try
@@ -34,6 +97,8 @@ namespace _15._02._2020
                 SqlCommand command = (SqlCommand)result.AsyncState;
                 /// блок 2
                 reader = command.EndExecuteReader(result);
+                Thread.Sleep(100);
+                Console.WriteLine("Task_1");
                 while (reader.Read())
                 {
                     for (int i = 0; i < reader.FieldCount; i++)
@@ -60,37 +125,39 @@ namespace _15._02._2020
                 }
             }
         }
-        static void AsyncQuery(string cs)
+        static IAsyncResult AsyncQuery(string cs, string query, Tasks task)
         {
             /// блок 1
             const string AsyncEnabled = "Asynchronous Processing=true";
             if (!cs.Contains(AsyncEnabled))
             {
-                cs = String.Format("{0}; {1}", cs, AsyncEnabled);
+                cs = string.Format("{0}; {1}", cs, AsyncEnabled);
             }
-            Console.WriteLine(cs);
             var conn = new SqlConnection(cs);
             SqlCommand comm = new SqlCommand();
             comm.Connection = conn;
-            /// блок 2
-            comm.CommandText = "SELECT * FROM Books;";
+            comm.CommandText = query;
             comm.CommandType = CommandType.Text;
             comm.CommandTimeout = 30; // sec
-            ///
             try
             {
                 conn.Open();
-                /// блок 3
-                AsyncCallback callback = new AsyncCallback(GetDataCallback);
-                comm.BeginExecuteReader(callback, comm);
-
-                Console.WriteLine("Added thread is working...");
+                AsyncCallback callback;
+                if (task==Tasks.T1)
+                {
+                    callback = new AsyncCallback(GetDataCallback);
+                }
+                else
+                {
+                    callback = new AsyncCallback(GetDataCallback2);
+                }
+                return comm.BeginExecuteReader(callback, comm);
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
+                throw new Exception("Error");
             }
         }
     }
-
 }
